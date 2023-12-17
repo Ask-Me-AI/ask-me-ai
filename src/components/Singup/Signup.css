@@ -1,0 +1,107 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 74em;
+    padding-bottom: 30px;
+}
+
+/* para sa header design */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 69px;
+    width: 100%;
+    margin-top: 10px;
+}
+.logo{
+    height: 350px;
+}
+.text{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 650;
+}
+
+/* para input fields design*/
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 110px;
+    border: 1px brown;
+    width: 600px;
+    background: white;
+    border-radius: 15px;
+ }
+
+.input input{
+    height: 45px;
+    width: 100%; 
+    padding: 30px;
+    background: transparent;
+    border-radius: 15px;
+    border:3px solid #C2C8D0;
+    color: #6D757E;
+    font-size: 30px;
+}
+
+/*para radio button design */
+.radio-container{
+    display: flex;
+    margin: 3em auto;
+    gap: 30px;
+}
+.radios label{
+    color: #fff;
+    font-size: 30px;
+}
+
+.radios{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.custom-radio {
+    width: 35px;
+    height: 35px;
+  }
+
+/*para submit button design */
+.submit-container{
+    display: flex;
+    margin: auto;
+}
+
+.submit{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100px;
+    font-size: 30px;
+    width: 600px;
+    border-radius: 15px;
+    background: #EE7C1B;
+}
+
+/*para already have an account design */
+.already-account{
+    display: flex;
+    margin: 30px auto;
+    font-size: 28px;
+    color: #fff;
+}
+.already-account span{
+    color: #EE7C1B;
+    padding: 0 20px;
+    cursor: pointer;
+}
