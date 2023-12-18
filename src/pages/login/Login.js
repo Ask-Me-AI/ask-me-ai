@@ -1,12 +1,14 @@
 import React from 'react'
-import { Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import askmeai_logo from '../../assets/askmeai_logo.png'
 import ctu_logo from '../../assets/ctu_logo.png'
 import open_ai_logo from '../../assets/open_ai_logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+    const navigate = useNavigate();
+
     return (
         <Form>
             <Form.Group className="mb-3">
@@ -16,7 +18,8 @@ function LoginForm() {
             <Form.Group className="mb-3">
                 <Form.Label style={{color: 'white'}}>Password</Form.Label>
                 <Form.Control type="password" style={{width: '100%'}}/>
-            </Form.Group>
+            </Form.Group><br />
+            <Button onClick={() => navigate('/HomePage')} style={{background: '#2CF6B3', padding: '0.5rem', width: '100%'}}>Log In</Button>
         </Form>
     )
 }
@@ -25,12 +28,12 @@ function Login() {
   return (
     <>
         <div style={{display: 'flex',padding: '4rem', paddingTop: '3rem'}}>
-            <section style={{width: '50%', display: 'flex', justifyContent: 'center'}}>
+            <section style={{width: '50%', display: 'flex', justifyContent: 'center', background: "#04050A", padding: '3rem', borderRadius: '10px'}}>
                 <div style={{width: '20rem'}}>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <img src={askmeai_logo} width='200px' alt="askmeai_logo"/>
+                        <img src={askmeai_logo} width='150px' alt="askmeai_logo"/>
                     </div>
-                    <h2 style={{color: 'white', fontSize: '1.5rem', textAlign: 'center'}}>Login to your account</h2>
+                    <h2 style={{color: 'white', fontSize: '1.5rem', textAlign: 'center'}}>Login to your account</h2><br />
                     <LoginForm /><br />
                     <div style={{display: 'flex', gap: '1rem', color: 'white', justifyContent: 'center'}}>
                         <p >Don't have an account?</p>
