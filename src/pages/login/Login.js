@@ -27,8 +27,8 @@ function LoginForm() {
 function Login() {
   return (
     <>
-        <div style={{display: 'flex',padding: '4rem', paddingTop: '3rem'}}>
-            <section style={{width: '50%', display: 'flex', justifyContent: 'center', background: "#04050A", padding: '3rem', borderRadius: '10px'}}>
+        <div style={{display: 'flex',padding: '4rem', paddingTop: '2rem', height: '100%'}}>
+            <section style={{width: '50%', display: 'flex', height: '38rem', justifyContent: 'center', background: "#04050A", padding: '3rem', borderRadius: '10px'}}>
                 <div style={{width: '20rem'}}>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                         <img src={askmeai_logo} width='150px' alt="askmeai_logo"/>

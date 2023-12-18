@@ -2,6 +2,7 @@ import React from 'react'
 import NavigationBar from '../../components/NavigationBar'
 import ai_illustration from '../../assets/ai_illustration.png'
 import { Button } from 'react-bootstrap'
+import Footer from '../../components/Footer'
 function Homepage() {
   return (
     <>
@@ -19,6 +20,7 @@ function Homepage() {
             <img src={ai_illustration} alt='' width='90%' />
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

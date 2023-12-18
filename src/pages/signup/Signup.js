@@ -31,7 +31,7 @@ function SignUpForm() {
 function Signup() {
   return (
     <>
-        <div style={{display: 'flex',padding: '4rem', paddingTop: '3rem'}}>
+        <div style={{display: 'flex',padding: '4rem', paddingTop: '2rem', height: '100%'}}>
             <section style={{width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div style={{color: 'white', textAlign: 'center', zIndex: '1'}}>
                     <h1 style={{fontSize: '3.5rem'}}>Welcome to Ask Me AI </h1>
@@ -42,8 +42,8 @@ function Signup() {
                     </div>
                 </div>
             </section>
-            <section style={{width: '50%', display: 'flex', justifyContent: 'center', background: "#04050A", padding: '3rem', borderRadius: '10px'}}>
-                <div style={{width: '20rem'}}>
+            <section style={{width: '50%', display: 'flex', justifyContent: 'center', background: "#04050A", padding: '3rem', height: '38rem', borderRadius: '10px'}}>
+                <div style={{width: '20rem',paddingBottom: '1rem',}}>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                         <img src={askmeai_logo} width='150px' alt="askmeai_logo"/>
                     </div>
@@ -51,7 +51,7 @@ function Signup() {
                     <SignUpForm /><br />
                     <div style={{display: 'flex', gap: '1rem', color: 'white', justifyContent: 'center'}}>
                         <p >Already have an account?</p>
-                        <Link to='/' style={{color: '#2CF6B3'}}>Log In</Link>
+                        <Link to='/ask-me-ai' style={{color: '#2CF6B3'}}>Log In</Link>
                     </div>
                 </div>
             </section>
