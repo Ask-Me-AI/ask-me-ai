@@ -4,7 +4,9 @@ import Signup from './pages/signup/Signup';
 
 function App() {
   return (
-    <Signup/>
+    <div style={{background: '#121212', height: '100vh'}}>
+      <Signup/>
+    </div>
   );
 }
 
