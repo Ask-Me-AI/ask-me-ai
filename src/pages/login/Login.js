@@ -5,21 +5,56 @@ import askmeai_logo from '../../assets/askmeai_logo.png'
 import ctu_logo from '../../assets/ctu_logo.png'
 import open_ai_logo from '../../assets/open_ai_logo.png'
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react'
+import {getDocs, collection} from '@firebase/firestore'
+import { firestore } from '../../firebase'
 
 function LoginForm() {
     const navigate = useNavigate();
+    const userName = useRef('');
+    const password = useRef('');
+    const ref = collection(firestore, "datas");
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const getData = async () => {
+            const d = await getDocs(ref);
+            console.log("🚀 ~ file: AddFirebase.jsx:13 ~ getData ~ d:", d)
+            setData(d.docs.map((doc) => ({...doc.data(),id: doc.id})))
+            console.log("🚀 ~ file: AddFirebase.jsx:13 ~ getData ~ data:", data)
+        }
+        getData();
+    }, [])
+    
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        if(userName.current.value === "" || password.current.value === "") return;
+        try {
+            const isMatch = data.some((user) => user.username === userName.current.value && user.password === password.current.value);
+            if(isMatch) {
+                window.alert("Login successfully!");
+                userName.current.value = "";
+                password.current.value = "";
+                navigate("/HomePage")
+            } else {
+                return window.alert("Incorrect username or password!");
+            }
+        } catch(e) {
+            console.log(e)
+        }
+    }
 
     return (
-        <Form>
+        <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3">
                 <Form.Label style={{color: 'white'}}>Username</Form.Label>
-                <Form.Control type="text" style={{width: '100%'}}/>
+                <Form.Control ref={userName} type="text" style={{width: '100%'}}/>
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label style={{color: 'white'}}>Password</Form.Label>
-                <Form.Control type="password" style={{width: '100%'}}/>
+                <Form.Control ref={password} type="password" style={{width: '100%'}}/>
             </Form.Group><br />
-            <Button onClick={() => navigate('/HomePage')} style={{background: '#2CF6B3', padding: '0.5rem', width: '100%'}}>Log In</Button>
+            <Button type='submit' style={{background: '#2CF6B3', padding: '0.5rem', width: '100%'}}>Log In</Button>
         </Form>
     )
 }

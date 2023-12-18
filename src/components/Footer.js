@@ -20,7 +20,9 @@ function Footer() {
             <p>Cebu Technological University<br />Argao Campus</p>
           </div>
         </div>
-        <div style={{display: 'flex', gap: '1rem'}}>
+        <div>
+          <h3 style={{padding: '0rem 2rem 0rem 0rem',fontSize: '3rem', color: 'white', textAlign: 'center'}}>Follow Us</h3>
+          <div style={{display: 'flex', gap: '2rem'}}>
             <a href='s'>
               <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' width="30px"alt=''/>
             </a>
@@ -34,6 +36,8 @@ function Footer() {
               <img src='https://cdn-icons-png.flaticon.com/512/281/281769.png' width="30px"alt=''/>
             </a>
           </div>
+        </div>
+        
         {/* <img src={logo} width='60px' alt=''/> */}
       </section>
       <section style={{width: '100%', background: '#121212', textAlign: 'center', height: '3rem', padding: '1rem', color: 'white', fontStyle: 'light'}}>
