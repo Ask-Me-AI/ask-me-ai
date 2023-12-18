@@ -21,7 +21,7 @@ function NavigationBar() {
             <Nav.Link href="/Chat" style={{color: 'white'}}>Chat</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link style={{color: 'white'}} onClick={() => navigate('/')}>Log out</Nav.Link>
+            <Nav.Link style={{color: 'white'}} onClick={() => navigate('/ask-me-ai')}>Log out</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

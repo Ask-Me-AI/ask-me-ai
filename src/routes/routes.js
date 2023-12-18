@@ -7,7 +7,7 @@ const RouterDom = () => {
  return (
     <>
        <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/ask-me-ai" element={<Login />} />
           <Route path="/SignUp" element={<Signup />} />
           <Route path="/HomePage" element={<Homepage />} />
        </Routes>
