@@ -17,8 +17,8 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto" >
-            <Nav.Link href="/HomePage" style={{color: 'white'}}>Home</Nav.Link>
-            <Nav.Link href="/Chat" style={{color: 'white'}}>Chat</Nav.Link>
+            <Nav.Link href="/HomePage" style={{color: window.location.pathname === "/HomePage" ? '#2CF6B3' : 'white'}}>Home</Nav.Link>
+            <Nav.Link href="/Chat" style={{color: window.location.pathname === "/Chat" ? '#2CF6B3' : 'white'}}>Chat</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link style={{color: 'white'}} onClick={() => navigate('/ask-me-ai')}>Log out</Nav.Link>

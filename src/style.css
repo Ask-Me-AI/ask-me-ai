@@ -1,0 +1,20 @@
+@media only screen and (max-width: 815px) {
+    .login {
+        flex-direction: column;
+    }
+    .signup {
+        flex-direction: column;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer ul {
+        text-align: center;
+    }
+    .home-image {
+        display: none;
+    }
+}
