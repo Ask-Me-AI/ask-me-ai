@@ -93,7 +93,6 @@ function Chat() {
                 {messages.map((message, i) => {
                   console.log(message)
                   return <>
-                      
                       <Message style={{padding: '1rem 1rem 0 0'}} key={i} model={message}>{message.sender !== 'user' && <Avatar src={logo} name="Ask Me AI" />}</Message> 
                     </>
                 })}
