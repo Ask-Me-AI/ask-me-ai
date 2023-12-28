@@ -13,7 +13,9 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import logo from '../../assets/askmeai_logo.png'
 
-const API_KEY ="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"
+// const API_KEY ="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"
+const API_KEY ="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"
+
 
 function Chat() {
   const [messages, setMessages] = useState([
