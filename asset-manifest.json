@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ask-me-ai/static/css/main.0e3e16ae.css",
-    "main.js": "/ask-me-ai/static/js/main.12a443b3.js",
+    "main.js": "/ask-me-ai/static/js/main.35bed4cd.js",
     "static/js/787.08e7b11f.chunk.js": "/ask-me-ai/static/js/787.08e7b11f.chunk.js",
     "static/media/bsit_logo.png": "/ask-me-ai/static/media/bsit_logo.f6e36b85df2edaf13f4c.png",
     "static/media/ctu_logo.png": "/ask-me-ai/static/media/ctu_logo.16e3c2ef62ade2bdab36.png",
@@ -9,11 +9,11 @@
     "static/media/askmeai_logo.png": "/ask-me-ai/static/media/askmeai_logo.a28827bb13587ff66e74.png",
     "index.html": "/ask-me-ai/index.html",
     "main.0e3e16ae.css.map": "/ask-me-ai/static/css/main.0e3e16ae.css.map",
-    "main.12a443b3.js.map": "/ask-me-ai/static/js/main.12a443b3.js.map",
+    "main.35bed4cd.js.map": "/ask-me-ai/static/js/main.35bed4cd.js.map",
     "787.08e7b11f.chunk.js.map": "/ask-me-ai/static/js/787.08e7b11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e3e16ae.css",
-    "static/js/main.12a443b3.js"
+    "static/js/main.35bed4cd.js"
   ]
 }
