@@ -13,13 +13,13 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import logo from '../../assets/askmeai_logo.png'
 
-const API_KEY ="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"
+const API_KEY ="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"
 
 
 function Chat() {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm CTU - Argao Ask Me AI! How can i help you today?",
+      message: "Hello, I'm CTU - Argao Ask Me AI chat bot! How can i help you today?",
       sentTime: "just now",
       sender: "ChatGPT",
     },
@@ -83,7 +83,7 @@ function Chat() {
     <>
       <NavigationBar/>
         <MainContainer style={{height: 'auto', margin: '2rem',  background: '#04050A', borderRadius: '10px', border: 'none'}}>
-          <ChatContainer style={{minHeight: '70vh', height: '70vh', margin: '2rem',  background: '#04050A', borderRadius: '10px'}}>       
+          <ChatContainer className='Chat' style={{minHeight: '70vh', height: '70vh', margin: '2rem',  background: '#04050A', borderRadius: '10px'}}>       
               <MessageList 
                 scrollBehavior="smooth" 
                 style={{margin: '2rem',  background: '#04050A', borderRadius: '10px'}}
@@ -96,7 +96,7 @@ function Chat() {
                     </>
                 })}
               </MessageList>
-              <MessageInput attachButton={false} style={{margin: '2rem',  background: '#04050A', borderRadius: '10px', border: 'none'}} placeholder="Send a Message" onSend={handleSendRequest} />        
+              <MessageInput attachButton={false} style={{margin: '1rem',  background: '#04050A', borderRadius: '10px', border: 'none'}} placeholder="Send a Message" onSend={handleSendRequest} />        
             </ChatContainer>
         </MainContainer>
       <Footer/>
