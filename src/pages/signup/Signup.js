@@ -31,9 +31,7 @@ function SignUpForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(userName.current.value === "" || password.current.value === "" || regType === ""){
-            return window.alert("Please input the fields")
-        } 
+        if(userName.current.value === "" || password.current.value === "" || regType === "") return;
         let newData = {
             username: userName.current.value,
             password: password.current.value,
@@ -71,7 +69,7 @@ function SignUpForm() {
                 <Form.Check name='regType' onChange={() => setRegType('others')} value="others" type='radio' label="Others" style={{color: 'white'}}/>
             </section>
             <br />
-            <Button type='submit' className="gradient-button" style={{ padding: '0.5rem', width: '100%'}}>Sign Up</Button>
+            <Button type='submit' style={{background: '#2CF6B3', padding: '0.5rem', width: '100%'}}>Sign Up</Button>
         </Form>
     )
 }
@@ -79,11 +77,11 @@ function SignUpForm() {
 function Signup() {
   return (
     <>
-        <div className='signup' style={{display: 'flex', paddingTop: '2rem', height: '100%'}}>
+        <div className='signup' style={{display: 'flex',padding: '4rem', paddingTop: '2rem', height: '100%'}}>
         <section style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <div style={{color: 'white', textAlign: 'center', zIndex: '1', padding: '1rem'}}>
-                <h1 className="gradient-text" style={{fontSize: '6.5rem'}}>Ask Me AI </h1>
-                <p style={{fontSize: '1rem', letterSpacing: '0.3rem', color: '#2CF6B3'}}>CTU - Argao AI Conversation Companion</p><br />
+                <h1 style={{fontSize: '6.5rem'}}>Ask Me AI </h1>
+                <p style={{fontSize: '1rem', color: '#2CF6B3', letterSpacing: '0.3rem'}}>CTU - Argao AI Conversation Companion</p><br />
                 <p style={{fontSize: '1.5rem'}}>Welcome aboard! Let's get started with creating your account.</p><br />
                 <div style={{display: 'flex', gap: '1rem', justifyContent: 'center'}}>
                     <img  width="80px" src={ctu_logo} alt=''/>
@@ -101,7 +99,7 @@ function Signup() {
                 <SignUpForm /><br />
                 <div style={{display: 'flex', gap: '1rem', color: 'white', justifyContent: 'center'}}>
                     <p>Already have an account?</p>
-                    <Link to='/ask-me-ai' className="gradient-text">Log In</Link>
+                    <Link to='/ask-me-ai' style={{color: '#2CF6B3'}}>Log In</Link>
                 </div>
             </div>
         </section>

@@ -10,7 +10,6 @@ import { useEffect, useRef, useState } from 'react'
 import {getDocs, collection} from '@firebase/firestore'
 import { firestore } from '../../firebase'
 import '../../../src/style.css'
-import { useLog } from '../../context/Context';
 
 function LoginForm() {
     const navigate = useNavigate();
@@ -18,7 +17,6 @@ function LoginForm() {
     const password = useRef('');
     const ref = collection(firestore, "datas");
     const [data, setData] = useState([])
-    const {setAccount} = useLog();
 
     useEffect(() => {
         const getData = async () => {
@@ -32,14 +30,11 @@ function LoginForm() {
     
     const handleLogin = async (e) => {
         e.preventDefault();
-        if(userName.current.value === "" || password.current.value === ""){
-            return window.alert("Please input the fields")
-        } 
+        if(userName.current.value === "" || password.current.value === "") return;
         try {
             const isMatch = data.some((user) => user.username === userName.current.value && user.password === password.current.value);
             if(isMatch) {
-                // window.alert("Login successfully!");
-                setAccount({userName: userName.current.value, password: password.current.value});
+                window.alert("Login successfully!");
                 userName.current.value = "";
                 password.current.value = "";
                 navigate("/HomePage")
@@ -61,7 +56,7 @@ function LoginForm() {
                 <Form.Label style={{color: 'white'}}>Password</Form.Label>
                 <Form.Control ref={password} type="password" style={{width: '100%'}}/>
             </Form.Group><br />
-            <Button type='submit' className="gradient-button" style={{padding: '0.5rem', width: '100%'}}>Log In</Button>
+            <Button type='submit' style={{background: '#2CF6B3', padding: '0.5rem', width: '100%'}}>Log In</Button>
         </Form>
     )
 }
@@ -69,7 +64,7 @@ function LoginForm() {
 function Login() {
   return (
     <>
-        <div className='login' style={{display: 'flex', paddingTop: '2rem', height: '100%'}}>
+        <div className='login' style={{display: 'flex',padding: '4rem', paddingTop: '2rem', height: '100%'}}>
             <section style={{width: '100%', display: 'flex', height: '38rem', justifyContent: 'center', background: "#04050A", padding: '3rem', borderRadius: '10px'}}>
                 <div style={{width: '20rem'}}>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -79,14 +74,14 @@ function Login() {
                     <LoginForm /><br />
                     <div style={{display: 'flex', gap: '1rem', color: 'white', justifyContent: 'center'}}>
                         <p >Don't have an account?</p>
-                        <Link to='/SignUp' className="gradient-text">Sign Up</Link>
+                        <Link to='/SignUp' style={{color: '#2CF6B3'}}>Sign Up</Link>
                     </div>
                 </div>
             </section>
             <section style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <div style={{color: 'white', textAlign: 'center', zIndex: '1', padding: '1rem'}}>
-                    <h1 className="gradient-text" style={{fontSize: '6.5rem'}}>Ask Me AI </h1>
-                    <p  style={{fontSize: '1rem', letterSpacing: '0.3rem', color: '#2CF6B3'}}>CTU - Argao AI Conversation Companion</p><br />
+                    <h1 style={{fontSize: '6.5rem'}}>Ask Me AI </h1>
+                    <p style={{fontSize: '1rem', color: '#2CF6B3', letterSpacing: '0.3rem'}}>CTU - Argao AI Conversation Companion</p><br />
                     <p style={{fontSize: '1.5rem'}}>It's great to see you again! Log in to your account.</p><br />
                     <div style={{display: 'flex', gap: '1rem', justifyContent: 'center'}}>
                         <img  width="80px" src={ctu_logo} alt=''/>

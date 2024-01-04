@@ -1,48 +1,8 @@
-.login {
-    padding: 4rem;
-}
-
-.signup {
-    padding: 4rem;
-}
-
-.home-page {
-    padding: 3rem 0;
-    margin: 2rem;
-}
-
-.gradient-text {
-    background-image: linear-gradient(to right, #ff5353, #2CF6B3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.gradient-button {
-    background: #2CF6B3;
-    border: none;
-    transition: 0.5s;
-}
-
-.gradient-button:hover {
-    background: #1ca577;
-}
-
-
-
 @media only screen and (max-width: 815px) {
     .login {
         flex-direction: column;
-        padding: 0.5rem;
     }
     .signup {
-        flex-direction: column;
-        padding: 0.5rem;
-    }
-    .home-page {
-        padding: 1rem 0;
-        margin: 1rem;
-    }
-    .home-page-btn {
         flex-direction: column;
     }
     .footer {
