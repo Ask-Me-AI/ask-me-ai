@@ -15,13 +15,13 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h3 style={{padding: '0rem 2rem 0rem 0rem',color: '#2CF6B3', fontSize: '3rem'}}>Ask Me AI</h3>
+          <h3 className="gradient-text" style={{padding: '0rem 2rem 0rem 0rem', fontSize: '3rem'}}>Ask Me AI</h3>
           <div style={{color: 'white'}}>
             <p>Cebu Technological University<br />Argao Campus</p>
           </div>
         </div>
         <div>
-          <h3 style={{padding: '0rem 2rem 0rem 0rem',fontSize: '3rem', color: 'white', textAlign: 'center'}}>Follow Us</h3>
+          <h3 style={{padding: '0rem 2rem 0rem 0rem',fontSize: '3rem', color: 'white', textAlign: 'center'}}>Follow Us On</h3>
           <div style={{display: 'flex', gap: '2rem'}}>
             <a href='https://web.facebook.com/nino.cartesiano/'>
               <img src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' width="30px"alt=''/>
@@ -40,7 +40,7 @@ function Footer() {
         
         {/* <img src={logo} width='60px' alt=''/> */}
       </section>
-      <section style={{width: '100%', background: '#121212', textAlign: 'center', height: '3rem', padding: '1rem', color: 'white', fontStyle: 'light'}}>
+      <section style={{width: '100%', background: '#121212', textAlign: 'center', height: '3rem', padding: '1rem', paddingTop: '2rem', color: 'white', fontStyle: 'light'}}>
         <h6>All rights reserve|Copyright @ 2024</h6>
       </section>
     </>
